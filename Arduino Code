@@ -1,0 +1,42 @@
+/*
+
+Name of the Project : Bluetooth Controlled Power Chord
+Author : Sharath Jain
+
+*/
+
+
+char val;         // variable to receive data from the serial port
+
+
+void setup()
+{
+
+  pinMode(10, OUTPUT);
+  
+    Serial.begin(9600);       // start serial communication at 115200bps
+
+}
+
+void loop()
+
+{
+  if( Serial.available() )       // if data is available to read
+  {
+    val = Serial.read();
+  }
+           // read it and store it in 'val'
+
+  if( val == 'A' )               // if 'A' was received led 2 is switched ON
+  {
+    digitalWrite(10, HIGH);    // turn ON pin 10
+  }
+ 
+  else if( val == 'a' )               // if 'a' was received led 2 OFF
+  {
+    digitalWrite(10, LOW);  // turn OFF pin 10
+  }
+
+
+
+}
