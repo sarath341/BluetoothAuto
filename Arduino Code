@@ -14,7 +14,7 @@ void setup()
 
   pinMode(10, OUTPUT);
   
-    Serial.begin(9600);       // start serial communication at 115200bps
+    Serial.begin(9600);       // start serial communication at 9600bps
 
 }
 
