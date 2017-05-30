@@ -1,6 +1,6 @@
 /*
 
-Name of the Project : Bluetooth Controlled Power Chord
+Name of the Project : Bluetooth IoT
 Author : Sharath Jain
 
 */
@@ -27,12 +27,12 @@ void loop()
   }
            // read it and store it in 'val'
 
-  if( val == 'A' )               // if 'A' was received led 2 is switched ON
+  if( val == 'A' )               // if 'A' was received led at Pin 10 is switched ON
   {
     digitalWrite(10, HIGH);    // turn ON pin 10
   }
  
-  else if( val == 'a' )               // if 'a' was received led 2 OFF
+  else if( val == 'a' )               // if 'a' was received led at PIN is Switched OFF
   {
     digitalWrite(10, LOW);  // turn OFF pin 10
   }
